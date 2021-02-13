@@ -30,7 +30,13 @@ function Users() {
     if(!users) return null;
 
     return <ul>
-        {users.map(user => <li key={user.id}></li>)}
+        {
+            users.map(user =>
+                <li key={user.id}>
+                    {user.username} ({user.name})
+                </li>
+            )
+        }
     </ul>
 }
 
